@@ -111,17 +111,17 @@ const VoicePortal = ({ onActionTrigger, addLog }) => {
     <div className="flex flex-col p-6 rounded-2xl border-glass bg-glass shadow-glow h-full justify-between">
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold italic tracking-wider text-orange-500 text-glow-orange">VANI VOICE PORTAL</h2>
-          <span className="text-[10px] bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-full border border-purple-500/30 uppercase font-mono">Bilingual Intent AI</span>
+          <h2 className="text-sm font-bold tracking-widest text-black font-syne uppercase">VANI VOICE PORTAL</h2>
+          <span className="text-[10px] bg-black/5 text-gray-500 px-2 py-0.5 rounded-full border border-black/10 uppercase font-mono">Bilingual Intent AI</span>
         </div>
 
         {/* Display Status or Speech bubble */}
-        <div className="bg-[#120F0D] border-glass rounded-xl p-4 min-h-[100px] mb-6 flex flex-col justify-between">
-          <p className="text-sm text-gray-300 italic leading-relaxed">
+        <div className="bg-black/5 border-glass rounded-xl p-4 min-h-[100px] mb-6 flex flex-col justify-between">
+          <p className="text-sm text-gray-700 italic leading-relaxed">
             {displayText}
           </p>
           {spokenResponse && (
-            <p className="text-xs text-purple-400 font-mono mt-3 text-right">
+            <p className="text-xs text-purple-600 font-mono mt-3 text-right">
               🔊 Vani: "{spokenResponse}"
             </p>
           )}
@@ -135,8 +135,8 @@ const VoicePortal = ({ onActionTrigger, addLog }) => {
             onClick={toggleListen}
             className={`w-16 h-16 rounded-full flex items-center justify-center border-glass transition-all duration-300 ${
               isListening 
-                ? 'bg-red-500/25 border-red-500 animate-pulse text-red-500' 
-                : 'bg-orange-500/10 border-orange-500/30 hover:border-orange-500 text-orange-500 hover:scale-105'
+                ? 'bg-red-500/20 border-red-500 animate-pulse text-red-600' 
+                : 'bg-black/5 border-black/10 hover:border-black text-black hover:scale-105'
             }`}
           >
             {isListening ? (
@@ -158,11 +158,11 @@ const VoicePortal = ({ onActionTrigger, addLog }) => {
             value={textCommand}
             onChange={(e) => setTextCommand(e.target.value)}
             placeholder="Type query (e.g. sales report, check sugar)"
-            className="flex-1 bg-[#1A1614] border-glass rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-orange-500"
+            className="flex-1 bg-white border-glass rounded-lg px-4 py-2 text-sm text-gray-800 focus:outline-none focus:border-black"
           />
           <button
             type="submit"
-            className="bg-orange-500 hover:bg-orange-600 text-black font-semibold text-xs px-4 py-2 rounded-lg transition-colors"
+            className="bg-black hover:bg-zinc-800 text-white font-semibold text-xs px-4 py-2 rounded-lg transition-colors"
           >
             Ask Vani
           </button>

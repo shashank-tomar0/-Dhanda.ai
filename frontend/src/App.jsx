@@ -186,25 +186,25 @@ const App = () => {
   const hasActiveCall = negotiations.some(n => n.status === 'NEGOTIATING' || n.status === 'WAITING_APPROVAL');
 
   return (
-    <div className="relative min-h-screen text-gray-200 px-4 md:px-8 py-6 z-10 flex flex-col justify-between">
+    <div className="relative min-h-screen text-gray-800 px-4 md:px-8 py-6 z-10 flex flex-col justify-between">
       
       {/* Smoky Background Glow */}
       <div className="smoky-bg-glow top-[10%] left-[25%]" />
       <div className="smoky-bg-glow bottom-[10%] right-[25%]" style={{ animationDelay: '-12s' }} />
 
       {/* Header Bar */}
-      <header className="relative w-full flex flex-col md:flex-row md:items-center justify-between border-b border-white/5 pb-4 mb-6 z-20 gap-4">
+      <header className="relative w-full flex flex-col md:flex-row md:items-center justify-between border-b border-black/5 pb-4 mb-6 z-20 gap-4">
         <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-3xl font-extrabold tracking-tight font-outfit italic text-white text-glow-orange">
-              Agent<span className="text-orange-500 font-syne not-italic">{'{'}a{'}'}</span>thon
+          <div className="flex items-baseline gap-2">
+            <h1 className="text-2xl font-black tracking-widest font-syne uppercase text-black">
+              Dhanda.ai
             </h1>
-            <span className="text-[10px] uppercase font-mono font-bold tracking-wider px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20">
-              Paytm Challenge
+            <span className="text-[9px] uppercase font-mono font-bold tracking-widest px-2 py-0.5 rounded bg-black/5 text-black border border-black/10">
+              Paytm OS
             </span>
           </div>
-          <p className="text-xs text-gray-400 font-outfit mt-1 italic">
-            Delhi NCR - 27 June - Paytm Host Innovation
+          <p className="text-[10px] text-gray-400 font-mono tracking-wider mt-1 uppercase">
+            / Delhi NCR - 27 June - Agent{'{'}a{'}'}thon /
           </p>
         </div>
 
@@ -212,7 +212,7 @@ const App = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setSettingsOpen(true)}
-            className="p-2 border border-white/5 bg-[#120F0D] hover:border-orange-500/50 rounded-xl text-gray-400 hover:text-white transition-all"
+            className="p-2 border border-black/5 bg-white hover:border-black/30 rounded-xl text-gray-600 hover:text-black transition-all"
             title="API Credentials Settings"
           >
             ⚙️
@@ -223,7 +223,7 @@ const App = () => {
             <select
               value={storeId}
               onChange={handleStoreChange}
-              className="bg-[#120F0D] border border-white/5 text-xs text-gray-200 px-3 py-2 rounded-xl focus:outline-none focus:border-orange-500 font-semibold"
+              className="bg-white border border-black/5 text-xs text-gray-800 px-3 py-2 rounded-xl focus:outline-none focus:border-black font-semibold"
             >
               {Object.keys(stores).map(key => (
                 <option key={key} value={key}>{stores[key].name}</option>
@@ -232,8 +232,8 @@ const App = () => {
           </div>
 
           <div className="hidden md:flex flex-col items-end font-mono">
-            <span className="text-sm font-extrabold text-white uppercase tracking-wider">Dhanda.ai OS</span>
-            <span className="text-[9px] text-orange-400 tracking-widest uppercase">Paytm Merchant OS</span>
+            <span className="text-sm font-extrabold text-black uppercase tracking-wider">Dhanda.ai OS</span>
+            <span className="text-[9px] text-gray-500 tracking-widest uppercase">Paytm Merchant OS</span>
           </div>
         </div>
       </header>
@@ -263,13 +263,13 @@ const App = () => {
       </main>
 
       {/* Navigation tabs */}
-      <nav className="relative flex border-b border-white/5 mb-6 z-20 gap-2 overflow-x-auto">
+      <nav className="relative flex border-b border-black/5 mb-6 z-20 gap-2 overflow-x-auto">
         <button
           onClick={() => setActiveTab('dashboard')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
             activeTab === 'dashboard'
-              ? 'border-b-2 border-orange-500 text-orange-500'
-              : 'text-gray-400 hover:text-white'
+              ? 'border-b-2 border-black text-black'
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           Overview
@@ -277,7 +277,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('spatial')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'spatial' ? 'border-b-2 border-red-500 text-red-500' : 'text-gray-400 hover:text-white'
+            activeTab === 'spatial' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           CCTV Spatial Twin
@@ -285,7 +285,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('cfo')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'cfo' ? 'border-b-2 border-emerald-500 text-emerald-500' : 'text-gray-400 hover:text-white'
+            activeTab === 'cfo' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           Chanakya CFO
@@ -293,7 +293,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('procurement')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'procurement' ? 'border-b-2 border-orange-500 text-orange-500' : 'text-gray-400 hover:text-white'
+            activeTab === 'procurement' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           Kuber Supply
@@ -301,7 +301,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('marketing')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'marketing' ? 'border-b-2 border-[#00B9F1] text-[#00B9F1]' : 'text-gray-400 hover:text-white'
+            activeTab === 'marketing' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           Vyas Marketing
@@ -309,7 +309,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('syndicate')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'syndicate' ? 'border-b-2 border-purple-500 text-purple-500' : 'text-gray-400 hover:text-white'
+            activeTab === 'syndicate' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           Kirana Cartel
@@ -317,7 +317,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('union')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'union' ? 'border-b-2 border-emerald-500 text-emerald-500' : 'text-gray-400 hover:text-white'
+            activeTab === 'union' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           P2P Credit Union
@@ -325,7 +325,7 @@ const App = () => {
         <button
           onClick={() => setActiveTab('underwrite')}
           className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'underwrite' ? 'border-b-2 border-orange-500 text-orange-500' : 'text-gray-400 hover:text-white'
+            activeTab === 'underwrite' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
           }`}
         >
           Invoice Underwriting

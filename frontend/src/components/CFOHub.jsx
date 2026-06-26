@@ -82,8 +82,8 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
         </defs>
 
         {/* Horizontal Guideline (Zero or base) */}
-        <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
-        <line x1={padding} y1={padding} x2={width - padding} y2={padding} stroke="rgba(255,255,255,0.02)" strokeWidth="1" />
+        <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="rgba(0,0,0,0.05)" strokeWidth="1" />
+        <line x1={padding} y1={padding} x2={width - padding} y2={padding} stroke="rgba(0,0,0,0.02)" strokeWidth="1" />
 
         {/* Filled Gradients */}
         {fillPathHistorical && <path d={fillPathHistorical} fill="url(#histGrad)" />}
@@ -106,7 +106,7 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
             return (
               <g key={idx}>
                 <circle cx={x} cy={y} r="4" fill={d.type === 'historical' ? '#2ECC71' : '#E67E22'} />
-                <text x={x} y={y - 8} fill="#A0A0A0" fontSize="8" textAnchor="middle" fontFamily="monospace">
+                <text x={x} y={y - 8} fill="#555555" fontSize="8" textAnchor="middle" fontFamily="monospace">
                   ₹{d.amount}
                 </text>
               </g>
@@ -131,16 +131,16 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
         {/* Core stats block */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-glass border-glass p-4 rounded-xl">
-            <span className="text-[10px] uppercase font-semibold text-gray-400 tracking-wider">Total Sales (Cycle)</span>
-            <h3 className="text-2xl font-bold text-[#2ECC71] mt-1 text-glow-emerald">₹{summary.totalSales}</h3>
+            <span className="text-[10px] uppercase font-semibold text-gray-500 tracking-wider">Total Sales (Cycle)</span>
+            <h3 className="text-2xl font-bold text-emerald-600 mt-1">₹{summary.totalSales}</h3>
           </div>
           <div className="bg-glass border-glass p-4 rounded-xl">
-            <span className="text-[10px] uppercase font-semibold text-gray-400 tracking-wider">Average Ticket</span>
-            <h3 className="text-2xl font-bold text-gray-100 mt-1">₹{summary.avgTicketSize}</h3>
+            <span className="text-[10px] uppercase font-semibold text-gray-500 tracking-wider">Average Ticket</span>
+            <h3 className="text-2xl font-bold text-gray-800 mt-1">₹{summary.avgTicketSize}</h3>
           </div>
           <div className="bg-glass border-glass p-4 rounded-xl">
-            <span className="text-[10px] uppercase font-semibold text-gray-400 tracking-wider">Estimated Balance</span>
-            <h3 className="text-2xl font-bold text-[#00B9F1] mt-1 text-glow-blue">₹{summary.currentBalance}</h3>
+            <span className="text-[10px] uppercase font-semibold text-gray-500 tracking-wider">Estimated Balance</span>
+            <h3 className="text-2xl font-bold text-[#0089B1] mt-1">₹{summary.currentBalance}</h3>
           </div>
         </div>
 
@@ -148,8 +148,8 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
         <div className="bg-glass border-glass p-6 rounded-2xl shadow-glow">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-sm font-bold tracking-wider uppercase text-gray-200">Chanakya Cash Flow Forecast</h2>
-              <p className="text-[10px] text-gray-400 mt-0.5">30-day projection based on Paytm merchant transaction history</p>
+              <h2 className="text-sm font-bold tracking-wider uppercase text-gray-900">Chanakya Cash Flow Forecast</h2>
+              <p className="text-[10px] text-gray-500 mt-0.5">30-day projection based on Paytm merchant transaction history</p>
             </div>
             <div className="flex items-center gap-3 text-[10px]">
               <span className="flex items-center gap-1"><span className="w-2.5 h-0.5 bg-[#2ECC71] inline-block"></span> Sales History</span>
@@ -169,23 +169,23 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
         <div className="bg-glass border-glass p-6 rounded-2xl shadow-glow-emerald flex flex-col justify-between h-[230px]">
           <div>
             <div className="flex justify-between items-start">
-              <h2 className="text-sm font-bold tracking-wider uppercase text-gray-200">Paytm Business Loan</h2>
+              <h2 className="text-sm font-bold tracking-wider uppercase text-gray-900">Paytm Business Loan</h2>
               <span className={`text-[9px] px-2 py-0.5 rounded-full font-mono font-bold ${
-                eligibility.status === 'APPROVED' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                eligibility.status === 'APPROVED' ? 'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20' : 'bg-red-500/10 text-red-600 border border-red-500/20'
               }`}>
                 {eligibility.status}
               </span>
             </div>
-            <p className="text-[10px] text-gray-400 mt-1">Autonomous scorecard by Chanakya Agent</p>
+            <p className="text-[10px] text-gray-500 mt-1">Autonomous scorecard by Chanakya Agent</p>
 
             <div className="grid grid-cols-2 gap-4 mt-4">
               <div>
-                <span className="text-[9px] uppercase text-gray-400">Limit Pre-Approved</span>
-                <p className="text-xl font-bold text-gray-100">₹{eligibility.borrowCapacity || '0'}</p>
+                <span className="text-[9px] uppercase text-gray-500">Limit Pre-Approved</span>
+                <p className="text-xl font-bold text-gray-800">₹{eligibility.borrowCapacity || '0'}</p>
               </div>
               <div>
-                <span className="text-[9px] uppercase text-gray-400">Interest Rate</span>
-                <p className="text-xl font-bold text-gray-100">{eligibility.interestRate || '0'}%</p>
+                <span className="text-[9px] uppercase text-gray-500">Interest Rate</span>
+                <p className="text-xl font-bold text-gray-800">{eligibility.interestRate || '0'}%</p>
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
             className={`w-full py-2 rounded-lg text-xs font-bold transition-all duration-300 ${
               eligibility.status === 'APPROVED' 
                 ? 'bg-emerald-500 text-black hover:bg-emerald-600 hover:scale-[1.02]' 
-                : 'bg-gray-800 text-gray-500 cursor-not-allowed'
+                : 'bg-gray-200 text-gray-400 cursor-not-allowed'
             }`}
           >
             {loadingLoan ? 'Disbursing...' : 'Apply & Disburse Instant'}
@@ -206,17 +206,17 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
         {/* GST Reporting section */}
         <div className="bg-glass border-glass p-6 rounded-2xl shadow-glow flex flex-col justify-between h-[230px]">
           <div>
-            <h2 className="text-sm font-bold tracking-wider uppercase text-gray-200">GST Compliance Ledger</h2>
-            <p className="text-[10px] text-gray-400 mt-1">Real-time tax categorization of transaction invoices</p>
+            <h2 className="text-sm font-bold tracking-wider uppercase text-gray-900">GST Compliance Ledger</h2>
+            <p className="text-[10px] text-gray-500 mt-1">Real-time tax categorization of transaction invoices</p>
 
             <div className="space-y-2 mt-4 text-xs">
-              <div className="flex justify-between border-b border-white/5 pb-1">
-                <span className="text-gray-400">5% Grocery Tax Bracket</span>
-                <span className="text-gray-100 font-mono">₹{gstReport.tax5Collected}</span>
+              <div className="flex justify-between border-b border-black/5 pb-1">
+                <span className="text-gray-500">5% Grocery Tax Bracket</span>
+                <span className="text-gray-800 font-mono">₹{gstReport.tax5Collected}</span>
               </div>
-              <div className="flex justify-between border-b border-white/5 pb-1">
-                <span className="text-gray-400">18% Standard Bracket</span>
-                <span className="text-gray-100 font-mono">₹{gstReport.tax18Collected}</span>
+              <div className="flex justify-between border-b border-black/5 pb-1">
+                <span className="text-gray-500">18% Standard Bracket</span>
+                <span className="text-gray-800 font-mono">₹{gstReport.tax18Collected}</span>
               </div>
               <div className="flex justify-between font-bold pt-1">
                 <span className="text-[#E67E22]">Total Tax Due</span>
@@ -227,7 +227,7 @@ const CFOHub = ({ metrics, forecast, onLoanAction, addLog }) => {
 
           <button
             onClick={() => alert("GST Ledger exported to JSON ledger format!")}
-            className="w-full py-2 bg-glass border border-orange-500/30 text-orange-500 rounded-lg text-xs font-bold hover:bg-orange-500/10 transition-all duration-300"
+            className="w-full py-2 bg-white border border-black/10 text-black hover:bg-black/5 rounded-lg text-xs font-bold transition-all duration-300"
           >
             Download GST Invoice Report
           </button>

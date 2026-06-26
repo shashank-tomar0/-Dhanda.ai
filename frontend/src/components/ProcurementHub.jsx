@@ -50,16 +50,16 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
         <div className="bg-glass border-glass p-6 rounded-2xl shadow-glow">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-sm font-bold tracking-wider uppercase text-gray-200">Inventory Tracker</h2>
-              <p className="text-[10px] text-gray-400 mt-0.5">Real-time stock monitoring & auto-replenishment levels</p>
+              <h2 className="text-sm font-bold tracking-wider uppercase text-gray-900">Inventory Tracker</h2>
+              <p className="text-[10px] text-gray-500 mt-0.5">Real-time stock monitoring & auto-replenishment levels</p>
             </div>
-            <span className="text-[9px] bg-orange-500/20 text-orange-400 border border-orange-500/35 px-2 py-0.5 rounded font-mono font-bold">KUBER STOCK AUTOMATION</span>
+            <span className="text-[9px] bg-black/5 text-gray-500 border border-black/10 px-2 py-0.5 rounded font-mono font-bold">KUBER STOCK AUTOMATION</span>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-white/5 text-gray-400 uppercase font-mono">
+                <tr className="border-b border-black/5 text-gray-500 uppercase font-mono">
                   <th className="py-2">Item Name</th>
                   <th className="py-2">Stock Level</th>
                   <th className="py-2">Min Limit</th>
@@ -67,18 +67,18 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
                   <th className="py-2 text-right">Simulate Sale</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-black/5">
                 {inventory.map(item => {
                   const isLow = item.current_stock < item.safety_limit;
                   return (
-                    <tr key={item.id} className="hover:bg-white/5 transition-colors">
-                      <td className="py-3 font-semibold text-gray-100">{item.item_name}</td>
+                    <tr key={item.id} className="hover:bg-black/5 transition-colors">
+                      <td className="py-3 font-semibold text-gray-800">{item.item_name}</td>
                       <td className="py-3 font-mono">
-                        <span className={isLow ? 'text-red-400 font-bold' : 'text-gray-300'}>
+                        <span className={isLow ? 'text-red-600 font-bold' : 'text-gray-700'}>
                           {item.current_stock} units
                         </span>
                       </td>
-                      <td className="py-3 text-gray-400 font-mono">{item.safety_limit}</td>
+                      <td className="py-3 text-gray-500 font-mono">{item.safety_limit}</td>
                       <td className="py-3">
                         <span className={`px-2 py-0.5 rounded-full text-[9px] font-mono border ${
                           item.replenishment_status === 'NORMAL' 
@@ -113,7 +113,7 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
         {/* Wholesaler Deals and approval lists */}
         <div className="bg-glass border-glass p-6 rounded-2xl shadow-glow h-[420px] flex flex-col justify-between">
           <div className="h-[90%] overflow-y-auto pr-1">
-            <h2 className="text-sm font-bold tracking-wider uppercase text-gray-200 mb-4">Active Supplier Bids</h2>
+            <h2 className="text-sm font-bold tracking-wider uppercase text-gray-900 mb-4">Active Supplier Bids</h2>
             
             {negotiations.length === 0 ? (
               <p className="text-xs text-gray-500 italic mt-8 text-center">No active pricing bids running.</p>
@@ -122,26 +122,26 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
                 {negotiations.map(neg => (
                   <div 
                     key={neg.id}
-                    className="p-3 bg-[#1A1614] border-glass rounded-xl cursor-pointer hover:border-orange-500/50 transition-all duration-300"
+                    className="p-3 bg-white border-glass rounded-xl cursor-pointer hover:border-black/35 shadow-sm transition-all duration-300"
                     onClick={() => setSelectedNeg(neg)}
                   >
                     <div className="flex justify-between items-start">
-                      <span className="text-[10px] uppercase font-bold text-orange-400 tracking-wide truncate max-w-[150px]">
+                      <span className="text-[10px] uppercase font-bold text-black tracking-wide truncate max-w-[150px]">
                         {neg.supplier_name}
                       </span>
                       <span className={`text-[8px] font-mono px-1.5 py-0.2 rounded border ${
                         neg.status === 'COMPLETED' 
-                          ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                          ? 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20'
                           : neg.status === 'WAITING_APPROVAL'
-                          ? 'bg-orange-500/10 text-orange-400 border-orange-500/30 animate-pulse'
-                          : 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20'
+                          ? 'bg-orange-500/10 text-orange-600 border-orange-500/20 animate-pulse'
+                          : 'bg-yellow-500/10 text-yellow-600 border-yellow-500/20'
                       }`}>
                         {neg.status.replace('_', ' ')}
                       </span>
                     </div>
-                    <p className="text-xs font-semibold text-gray-200 mt-2">{neg.quantity} units of {neg.item_name}</p>
+                    <p className="text-xs font-semibold text-gray-800 mt-2">{neg.quantity} units of {neg.item_name}</p>
                     
-                    <div className="flex justify-between items-center text-[10px] text-gray-400 mt-2 pt-2 border-t border-white/5 font-mono">
+                    <div className="flex justify-between items-center text-[10px] text-gray-500 mt-2 pt-2 border-t border-black/5 font-mono">
                       <span>Rate: ₹{neg.agreed_price || neg.catalog_price}/unit</span>
                       {neg.status === 'WAITING_APPROVAL' && (
                         <button
@@ -150,7 +150,7 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
                             if (onCheckout) onCheckout(neg);
                             else approveNegotiation(neg.id);
                           }}
-                          className="bg-orange-500 hover:bg-orange-600 text-black font-bold font-mono text-[9px] px-2 py-0.5 rounded transition-all duration-300"
+                          className="bg-black hover:bg-zinc-800 text-white font-bold font-mono text-[9px] px-2 py-0.5 rounded transition-all duration-300"
                         >
                           PAY & APPROVE
                         </button>
@@ -169,31 +169,31 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
 
       {/* Negotiation Logs Dialog (Modal overlay) */}
       {selectedNeg && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-[#120F0D] border border-orange-500/35 rounded-2xl w-full max-w-lg overflow-hidden shadow-glow max-h-[90vh] flex flex-col justify-between">
-            <div className="p-5 border-b border-white/5 flex justify-between items-center bg-glass">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white border border-black/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-glow max-h-[90vh] flex flex-col justify-between">
+            <div className="p-5 border-b border-black/5 flex justify-between items-center bg-glass">
               <div>
-                <h3 className="text-sm font-bold uppercase text-orange-500">{selectedNeg.supplier_name}</h3>
-                <p className="text-[10px] text-gray-400 font-mono mt-0.5">Procurement negotiation transcript for {selectedNeg.item_name}</p>
+                <h3 className="text-sm font-black uppercase text-black font-syne">{selectedNeg.supplier_name}</h3>
+                <p className="text-[10px] text-gray-500 font-mono mt-0.5">Procurement negotiation transcript for {selectedNeg.item_name}</p>
               </div>
               <button 
                 onClick={() => setSelectedNeg(null)}
-                className="text-gray-400 hover:text-white font-bold text-lg"
+                className="text-gray-500 hover:text-black font-bold text-lg"
               >
                 ✕
               </button>
             </div>
 
-            <div className="p-5 flex-1 overflow-y-auto space-y-4 max-h-[350px] min-h-[250px] bg-[#0E0C0B] font-mono text-xs">
+            <div className="p-5 flex-1 overflow-y-auto space-y-4 max-h-[350px] min-h-[250px] bg-black/5 font-mono text-xs">
               {selectedNeg.log.map((chat, idx) => {
                 const isKuber = chat.sender.startsWith('Kuber');
                 return (
                   <div key={idx} className={`flex flex-col ${isKuber ? 'items-start' : 'items-end'}`}>
-                    <span className={`text-[9px] uppercase font-bold mb-1 ${isKuber ? 'text-orange-400' : 'text-purple-400'}`}>
+                    <span className={`text-[9px] uppercase font-bold mb-1 ${isKuber ? 'text-orange-600' : 'text-purple-600'}`}>
                       {chat.sender}
                     </span>
                     <p className={`p-3 rounded-lg leading-relaxed max-w-[85%] ${
-                      isKuber ? 'bg-[#1D1411] border border-orange-500/10 text-gray-200' : 'bg-[#18111D] border border-purple-500/10 text-gray-200'
+                      isKuber ? 'bg-orange-50/70 border border-orange-500/10 text-gray-800' : 'bg-purple-50/70 border border-purple-500/10 text-gray-800'
                     }`}>
                       {chat.message}
                     </p>
@@ -202,10 +202,10 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
               })}
             </div>
 
-            <div className="p-4 border-t border-white/5 bg-glass flex justify-between items-center text-xs">
+            <div className="p-4 border-t border-black/5 bg-glass flex justify-between items-center text-xs">
               <div>
-                <span className="text-gray-400">Negotiated Rate:</span>
-                <span className="text-white font-bold ml-1 font-mono">₹{selectedNeg.agreed_price || selectedNeg.catalog_price}/unit</span>
+                <span className="text-gray-500">Negotiated Rate:</span>
+                <span className="text-black font-bold ml-1 font-mono">₹{selectedNeg.agreed_price || selectedNeg.catalog_price}/unit</span>
               </div>
               {selectedNeg.status === 'WAITING_APPROVAL' ? (
                 <button
@@ -214,7 +214,7 @@ const ProcurementHub = ({ inventory, negotiations, onRefresh, addLog, onCheckout
                     else approveNegotiation(selectedNeg.id);
                     setSelectedNeg(null);
                   }}
-                  className="bg-orange-500 hover:bg-orange-600 text-black font-bold font-mono px-4 py-1.5 rounded-lg transition-colors"
+                  className="bg-black hover:bg-zinc-800 text-white font-bold font-mono px-4 py-1.5 rounded-lg transition-colors"
                 >
                   Pay via Paytm Soundbox
                 </button>

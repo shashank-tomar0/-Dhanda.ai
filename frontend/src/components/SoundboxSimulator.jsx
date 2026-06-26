@@ -92,8 +92,8 @@ const SoundboxSimulator = ({ logs }) => {
     <div className="bg-glass border-glass p-5 rounded-2xl shadow-glow flex flex-col items-center justify-between h-[360px]">
       
       {/* Soundbox Header */}
-      <div className="w-full flex justify-between items-center pb-2 border-b border-white/5">
-        <span className="text-[10px] uppercase font-bold text-gray-400 font-mono tracking-wider">Paytm Soundbox 4.0</span>
+      <div className="w-full flex justify-between items-center pb-2 border-b border-black/5">
+        <span className="text-[10px] uppercase font-bold text-gray-500 font-mono tracking-wider">Paytm Soundbox 4.0</span>
         
         {/* Toggle Sound */}
         <button
@@ -103,8 +103,8 @@ const SoundboxSimulator = ({ logs }) => {
           }}
           className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold border transition-colors ${
             soundEnabled 
-              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30' 
-              : 'bg-red-500/10 text-red-400 border-red-500/30'
+              ? 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20' 
+              : 'bg-red-500/10 text-red-600 border-red-500/20'
           }`}
         >
           AUDIO: {soundEnabled ? 'ON' : 'OFF'}
@@ -112,7 +112,7 @@ const SoundboxSimulator = ({ logs }) => {
       </div>
 
       {/* Physical Device Shell */}
-      <div className="relative w-40 h-40 bg-gradient-to-br from-[#00b9f1] to-[#005c78] rounded-3xl border border-[#ffffff30] flex flex-col items-center justify-center p-4 shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:scale-105">
+      <div className="relative w-40 h-40 bg-gradient-to-br from-[#00b9f1] to-[#005c78] rounded-3xl border border-[#ffffff30] flex flex-col items-center justify-center p-4 shadow-[0_12px_24px_rgba(0,185,241,0.2)] transition-all duration-300 hover:scale-105">
         
         {/* White border insert */}
         <div className="absolute inset-2 border border-white/10 rounded-2xl pointer-events-none" />
@@ -149,8 +149,8 @@ const SoundboxSimulator = ({ logs }) => {
       {/* Interactive Controls */}
       <div className="w-full space-y-3">
         {/* Output display text */}
-        <div className="bg-[#120F0D] border-glass rounded-xl p-2.5 text-center min-h-[48px] flex items-center justify-center">
-          <p className="text-[10px] text-gray-300 font-mono leading-relaxed truncate max-w-[280px]">
+        <div className="bg-black/5 border-glass rounded-xl p-2.5 text-center min-h-[48px] flex items-center justify-center">
+          <p className="text-[10px] text-gray-700 font-mono leading-relaxed truncate max-w-[280px]">
             {speechText}
           </p>
         </div>
@@ -158,7 +158,7 @@ const SoundboxSimulator = ({ logs }) => {
         {/* Push-to-Talk emergency loan */}
         <button
           onClick={simulateVoiceLending}
-          className="w-full py-2 bg-orange-500 text-black hover:bg-orange-600 font-extrabold text-[10px] rounded-lg transition-colors flex items-center justify-center gap-1.5 uppercase font-mono shadow-glow"
+          className="w-full py-2 bg-black text-white hover:bg-zinc-800 font-extrabold text-[10px] rounded-lg transition-colors flex items-center justify-center gap-1.5 uppercase font-mono shadow-glow"
         >
           🎙️ Push-to-Talk: Voice Loan Request
         </button>

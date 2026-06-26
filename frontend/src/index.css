@@ -9,14 +9,14 @@
 
 :root {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0D0B0A;
-  color: #F5F1EE;
+  background-color: #F5F5F7;
+  color: #1D1D1F;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
-  background: radial-gradient(circle at 50% 50%, #1D1411 0%, #0D0B0A 100%);
+  background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #F5F5F7 100%);
   min-height: 100vh;
 }
 
@@ -25,37 +25,37 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(13, 11, 10, 0.5);
+  background: rgba(0, 0, 0, 0.02);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(230, 126, 34, 0.4);
+  background: rgba(0, 0, 0, 0.16);
 }
 
 /* Glassmorphism Classes */
 .bg-glass {
-  background: rgba(22, 18, 16, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .border-glass {
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .shadow-glow {
-  box-shadow: 0 0 25px rgba(211, 84, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03);
 }
 
 .shadow-glow-emerald {
-  box-shadow: 0 0 25px rgba(46, 204, 113, 0.15);
+  box-shadow: 0 12px 40px rgba(46, 204, 113, 0.04);
 }
 
 .shadow-glow-blue {
-  box-shadow: 0 0 25px rgba(0, 185, 241, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 185, 241, 0.04);
 }
 
 /* Volcanic Smoky Animation */
@@ -65,8 +65,8 @@ body {
     opacity: 0.1;
   }
   50% {
-    transform: translate(50px, -50px) scale(1.2) rotate(180deg);
-    opacity: 0.25;
+    transform: translate(30px, -30px) scale(1.1) rotate(180deg);
+    opacity: 0.2;
   }
   100% {
     transform: translate(0, 0) scale(1) rotate(360deg);
@@ -79,7 +79,7 @@ body {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(211, 84, 0, 0.08) 0%, rgba(211, 84, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.015) 0%, rgba(0, 0, 0, 0) 70%);
   filter: blur(80px);
   animation: smoke-float 25s infinite ease-in-out;
   pointer-events: none;
@@ -112,13 +112,13 @@ body {
 
 /* Custom Text Glows */
 .text-glow-orange {
-  text-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .text-glow-emerald {
-  text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .text-glow-blue {
-  text-shadow: 0 0 10px rgba(0, 185, 241, 0.5);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }

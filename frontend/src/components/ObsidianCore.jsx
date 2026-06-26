@@ -92,8 +92,8 @@ const ObsidianCore = ({ activeAgent, logs }) => {
     positions.set(initialPositions);
     targetPositions.set(initialPositions);
 
-    // Set colors to default orange-red lava
-    const baseColor = new THREE.Color('#E67E22');
+    // Set colors to default obsidian black/charcoal
+    const baseColor = new THREE.Color('#1A1A1A');
     for (let i = 0; i < particleCount; i++) {
       colors[i * 3] = baseColor.r;
       colors[i * 3 + 1] = baseColor.g;
@@ -103,13 +103,13 @@ const ObsidianCore = ({ activeAgent, logs }) => {
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-    // Particle Shader Material
+    // Particle Shader Material - NormalBlending for light background
     const material = new THREE.PointsMaterial({
       size: 0.08,
       vertexColors: true,
       transparent: true,
       opacity: 0.85,
-      blending: THREE.AdditiveBlending,
+      blending: THREE.NormalBlending,
       depthWrite: false
     });
 
@@ -170,7 +170,7 @@ const ObsidianCore = ({ activeAgent, logs }) => {
     if (!threeRef.current) return;
 
     const { targetPositions, colors, count, THREE, particleSystem } = threeRef.current;
-    let targetColor = new THREE.Color('#E67E22'); // default orange
+    let targetColor = new THREE.Color('#1A1A1A'); // default obsidian black
 
     // Target Shapes:
     // none -> Octahedron (Crystalline)
@@ -234,7 +234,7 @@ const ObsidianCore = ({ activeAgent, logs }) => {
     } 
     else {
       // Default: Octahedron (Obsidian Crystal)
-      targetColor = new THREE.Color('#E67E22');
+      targetColor = new THREE.Color('#1A1A1A');
       const r = 2.4;
       for (let i = 0; i < count; i++) {
         const qX = Math.random() > 0.5 ? 1 : -1;
@@ -280,34 +280,34 @@ const ObsidianCore = ({ activeAgent, logs }) => {
 
   return (
     <div ref={containerRef} className="relative w-full h-[360px] flex items-center justify-center border-glass bg-glass rounded-2xl overflow-hidden shadow-glow">
-      <div className="absolute inset-0 bg-gradient-to-t from-orange-500/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
       
       {/* Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:30px_30px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:30px_30px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* SVG Connecting Cables */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
         <line 
           x1="28%" y1="28%" x2="50%" y2="50%" 
-          stroke={isAgentActive('cfo') ? '#2ECC71' : 'rgba(255,255,255,0.1)'} 
+          stroke={isAgentActive('cfo') ? '#2ECC71' : 'rgba(0,0,0,0.06)'} 
           strokeWidth={isAgentActive('cfo') ? '2' : '1'} 
           className={isAgentActive('cfo') ? 'animate-pulse' : ''}
         />
         <line 
           x1="72%" y1="28%" x2="50%" y2="50%" 
-          stroke={isAgentActive('procurement') ? '#E67E22' : 'rgba(255,255,255,0.1)'} 
+          stroke={isAgentActive('procurement') ? '#E67E22' : 'rgba(0,0,0,0.06)'} 
           strokeWidth={isAgentActive('procurement') ? '2' : '1'} 
           className={isAgentActive('procurement') ? 'animate-pulse' : ''}
         />
         <line 
           x1="28%" y1="72%" x2="50%" y2="50%" 
-          stroke={isAgentActive('marketing') ? '#00B9F1' : 'rgba(255,255,255,0.1)'} 
+          stroke={isAgentActive('marketing') ? '#00B9F1' : 'rgba(0,0,0,0.06)'} 
           strokeWidth={isAgentActive('marketing') ? '2' : '1'} 
           className={isAgentActive('marketing') ? 'animate-pulse' : ''}
         />
         <line 
           x1="72%" y1="72%" x2="50%" y2="50%" 
-          stroke={isAgentActive('voice') ? '#9B59B6' : 'rgba(255,255,255,0.1)'} 
+          stroke={isAgentActive('voice') ? '#9B59B6' : 'rgba(0,0,0,0.06)'} 
           strokeWidth={isAgentActive('voice') ? '2' : '1'} 
           className={isAgentActive('voice') ? 'animate-pulse' : ''}
         />
@@ -315,39 +315,39 @@ const ObsidianCore = ({ activeAgent, logs }) => {
 
       {/* 4 Corner Nodes */}
       <div 
-        className={`absolute top-[18%] left-[12%] md:left-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-[#141211] w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
-          isAgentActive('cfo') ? 'border-[#2ECC71] shadow-glow-emerald scale-105' : 'opacity-65'
+        className={`absolute top-[18%] left-[12%] md:left-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-white w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
+          isAgentActive('cfo') ? 'border-[#2ECC71] shadow-glow-emerald scale-105' : 'opacity-75'
         }`}
       >
         <span className="text-[#2ECC71] font-bold text-xs md:text-sm tracking-wider uppercase">Chanakya (CFO)</span>
-        <span className="text-[10px] text-gray-400 text-center mt-1">Financials & Credit</span>
+        <span className="text-[10px] text-gray-500 text-center mt-1">Financials & Credit</span>
       </div>
 
       <div 
-        className={`absolute top-[18%] right-[12%] md:right-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-[#141211] w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
-          isAgentActive('procurement') ? 'border-[#E67E22] shadow-glow scale-105' : 'opacity-65'
+        className={`absolute top-[18%] right-[12%] md:right-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-white w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
+          isAgentActive('procurement') ? 'border-[#E67E22] shadow-glow scale-105' : 'opacity-75'
         }`}
       >
         <span className="text-[#E67E22] font-bold text-xs md:text-sm tracking-wider uppercase">Kuber (Procure)</span>
-        <span className="text-[10px] text-gray-400 text-center mt-1 font-outfit">Inventory & Cartel</span>
+        <span className="text-[10px] text-gray-500 text-center mt-1 font-outfit">Inventory & Cartel</span>
       </div>
 
       <div 
-        className={`absolute bottom-[18%] left-[12%] md:left-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-[#141211] w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
-          isAgentActive('marketing') ? 'border-[#00B9F1] shadow-glow-blue scale-105' : 'opacity-65'
+        className={`absolute bottom-[18%] left-[12%] md:left-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-white w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
+          isAgentActive('marketing') ? 'border-[#00B9F1] shadow-glow-blue scale-105' : 'opacity-75'
         }`}
       >
         <span className="text-[#00B9F1] font-bold text-xs md:text-sm tracking-wider uppercase">Vyas (Marketing)</span>
-        <span className="text-[10px] text-gray-400 text-center mt-1 font-outfit">WhatsApp & Campaigns</span>
+        <span className="text-[10px] text-gray-500 text-center mt-1 font-outfit">WhatsApp & Campaigns</span>
       </div>
 
       <div 
-        className={`absolute bottom-[18%] right-[12%] md:right-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-[#141211] w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
-          isAgentActive('voice') ? 'border-[#9B59B6] shadow-glow scale-105' : 'opacity-65'
+        className={`absolute bottom-[18%] right-[12%] md:right-[18%] flex flex-col items-center justify-center p-3.5 rounded-xl border-glass bg-white w-[140px] md:w-[170px] z-10 transition-all duration-300 ${
+          isAgentActive('voice') ? 'border-[#9B59B6] shadow-glow scale-105' : 'opacity-75'
         }`}
       >
         <span className="text-[#9B59B6] font-bold text-xs md:text-sm tracking-wider uppercase">Vani (Voice)</span>
-        <span className="text-[10px] text-gray-400 text-center mt-1 font-outfit">Bilingual Soundbox</span>
+        <span className="text-[10px] text-gray-500 text-center mt-1 font-outfit">Bilingual Soundbox</span>
       </div>
 
       {/* WebGL Canvas in Center */}
@@ -356,13 +356,13 @@ const ObsidianCore = ({ activeAgent, logs }) => {
       ) : (
         /* Fallback animated SVG crystal if CDN is offline */
         <div className="crystal-container flex items-center justify-center z-20">
-          <div className="w-12 h-20 bg-gradient-to-b from-[#1E1412] to-[#0A0706] border border-orange-500/30 animate-pulse"></div>
+          <div className="w-12 h-20 bg-gradient-to-b from-[#EEEEEE] to-[#CCCCCC] border border-black/10 animate-pulse"></div>
         </div>
       )}
 
       {/* Pulsing Core Ring */}
-      <div className="absolute w-[180px] h-[180px] rounded-full border border-orange-500/10 animate-ping opacity-25 pointer-events-none" />
-      <div className="absolute w-[220px] h-[220px] rounded-full border border-white/5 pointer-events-none" />
+      <div className="absolute w-[180px] h-[180px] rounded-full border border-black/5 animate-ping opacity-25 pointer-events-none" />
+      <div className="absolute w-[220px] h-[220px] rounded-full border border-black/5 pointer-events-none" />
     </div>
   );
 };
