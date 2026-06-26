@@ -93,6 +93,16 @@ class KuberProcure {
     const createdNeg = db.addNegotiation(storeId, newNeg);
     db.updateInventory(storeId, item.id, { replenishment_status: "NEGOTIATING" });
 
+    // Send real WhatsApp notification to Wholesaler if configured
+    const settings = db.getSettings(storeId);
+    if (settings.wholesalerPhone) {
+      const whatsappService = require('../services/whatsappService');
+      const text = isCartelFormed
+        ? `Namaste! Noida Kirana Cartel (4 stores) wants to place a joint bulk order for ${aggregatedQty} units of ${item.item_name}. Target rate: ₹${initialBid}/unit.`
+        : `Namaste! ${db.getStore(storeId).name} needs restock of ${myQty} units of ${item.item_name}. Target rate: ₹${initialBid}/unit.`;
+      whatsappService.sendMessage(settings.wholesalerPhone, text, storeId);
+    }
+
     this.runSimulatedNegotiation(storeId, createdNeg.id, logCallback);
   }
 
@@ -165,6 +175,14 @@ class KuberProcure {
     }
 
     db.updateNegotiation(storeId, negId, { status: "COMPLETED" });
+
+    // Send real WhatsApp notification to Wholesaler if configured
+    const settings = db.getSettings(storeId);
+    if (settings.wholesalerPhone) {
+      const whatsappService = require('../services/whatsappService');
+      const text = `Order Approved! Paytm Soundbox transfer of ₹${neg.agreed_price * purchaseQty} confirmed for ${purchaseQty} units of ${neg.item_name}. Settle rate: ₹${neg.agreed_price}/unit. Settle status: COMPLETED. Dispatch items.`;
+      whatsappService.sendMessage(settings.wholesalerPhone, text, storeId);
+    }
 
     if (neg.is_syndicate && neg.contributions) {
       neg.contributions.forEach(contrib => {

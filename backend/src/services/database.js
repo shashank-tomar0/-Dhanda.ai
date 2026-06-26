@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const DB_PATH = path.join(__dirname, 'db.json');
 
@@ -76,6 +77,9 @@ const defaultData = {
     twilioNumber: '',
     whatsappRecipient: ''
   },
+  users: [
+    { id: 1, username: "merchant", passwordHash: "5e883767f3759680ec81794790463490058319672f3a41a49e0b8720b6e1b4b4", storeId: "ramesh" } // SHA-256 for "password"
+  ],
   
   // NEW next-gen tables
   p2p_loans: [
@@ -104,7 +108,8 @@ class Database {
           pooled_orders: parsed.pooled_orders || defaultData.pooled_orders,
           settings: { ...defaultData.settings, ...parsed.settings },
           p2p_loans: parsed.p2p_loans || defaultData.p2p_loans,
-          cctv_feeds: parsed.cctv_feeds || defaultData.cctv_feeds
+          cctv_feeds: parsed.cctv_feeds || defaultData.cctv_feeds,
+          users: parsed.users || defaultData.users
         };
       } else {
         this.save();
@@ -125,7 +130,8 @@ class Database {
   getStore(storeId) {
     const id = storeId || 'ramesh';
     if (!this.data.stores[id]) {
-      this.data.stores[id] = { ...storeDefaultData.ramesh };
+      this.data.stores[id] = JSON.parse(JSON.stringify(storeDefaultData.ramesh));
+      this.save();
     }
     return this.data.stores[id];
   }
@@ -252,14 +258,88 @@ class Database {
   }
 
   // Twilio Settings
-  getSettings() {
-    return this.data.settings;
+  getSettings(storeId) {
+    const id = storeId || 'ramesh';
+    const store = this.getStore(id);
+    if (!store.settings) {
+      store.settings = {
+        twilioSid: this.data.settings.twilioSid || '',
+        twilioToken: this.data.settings.twilioToken || '',
+        twilioNumber: this.data.settings.twilioNumber || '',
+        whatsappRecipient: this.data.settings.whatsappRecipient || '',
+        wholesalerPhone: '',
+        paytmMid: '',
+        paytmKey: '',
+        paytmVpa: ''
+      };
+    }
+    return store.settings;
   }
 
-  updateSettings(updates) {
-    Object.assign(this.data.settings, updates);
+  updateSettings(storeId, updates) {
+    const id = storeId || 'ramesh';
+    const store = this.getStore(id);
+    if (!store.settings) {
+      store.settings = {};
+    }
+    Object.assign(store.settings, updates);
     this.save();
-    return this.data.settings;
+    return store.settings;
+  }
+
+  // Auth Methods
+  registerUser(username, password) {
+    const passwordHash = crypto.createHash('sha256').update(password).digest('hex');
+    const existing = this.data.users.find(u => u.username.toLowerCase() === username.toLowerCase());
+    if (existing) {
+      throw new Error("Username already exists");
+    }
+    const storeId = `store_${username.toLowerCase().replace(/[^a-z0-9]/g, '')}_${Math.floor(1000 + Math.random() * 9000)}`;
+    const newUser = {
+      id: this.data.users.length + 1,
+      username,
+      passwordHash,
+      storeId,
+      onboarded: false
+    };
+    this.data.users.push(newUser);
+    
+    // Seed new store defaults
+    const store = this.getStore(storeId);
+    store.name = `${username.charAt(0).toUpperCase() + username.slice(1)}'s Kirana Store`;
+    
+    this.save();
+    return newUser;
+  }
+
+  verifyUser(username, password) {
+    const passwordHash = crypto.createHash('sha256').update(password).digest('hex');
+    const user = this.data.users.find(u => u.username.toLowerCase() === username.toLowerCase() && u.passwordHash === passwordHash);
+    return user || null;
+  }
+
+  onboardStore(storeId, storeName, city, details) {
+    const store = this.getStore(storeId);
+    store.name = storeName;
+    store.city = city;
+    store.settings = {
+      twilioSid: details.twilioSid || '',
+      twilioToken: details.twilioToken || '',
+      twilioNumber: details.twilioNumber || '',
+      whatsappRecipient: details.whatsappRecipient || '',
+      wholesalerPhone: details.wholesalerPhone || '',
+      paytmMid: details.paytmMid || '',
+      paytmKey: details.paytmKey || '',
+      paytmVpa: details.paytmVpa || ''
+    };
+    
+    const user = this.data.users.find(u => u.storeId === storeId);
+    if (user) {
+      user.onboarded = true;
+    }
+    
+    this.save();
+    return store;
   }
 
   // NEW P2P Loans

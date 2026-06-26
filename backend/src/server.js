@@ -64,16 +64,64 @@ app.get('/api/stores', (req, res) => {
   }
 });
 
-// Settings config
+// Settings config (scoped by storeId)
 app.get('/api/settings', (req, res) => {
-  res.json(db.getSettings());
+  const storeId = req.query.storeId || 'ramesh';
+  res.json(db.getSettings(storeId));
 });
 
 app.post('/api/settings', (req, res) => {
   try {
-    db.updateSettings(req.body);
-    sendAgentLog("System", "API settings updated. Real-time Twilio triggers activated.");
+    const storeId = req.query.storeId || 'ramesh';
+    db.updateSettings(storeId, req.body);
+    sendAgentLog("System", `[Store: ${storeId}] API settings updated. Real-time Twilio triggers activated.`);
     res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Authentication and Onboarding endpoints
+app.post('/api/auth/register', (req, res) => {
+  try {
+    const { username, password } = req.body;
+    if (!username || !password) {
+      return res.status(400).json({ error: "Username and password are required" });
+    }
+    const user = db.registerUser(username, password);
+    sendAgentLog("System", `New merchant user '${username}' registered with Store ID: ${user.storeId}`);
+    res.json({ success: true, user: { username: user.username, storeId: user.storeId, onboarded: user.onboarded } });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+app.post('/api/auth/login', (req, res) => {
+  try {
+    const { username, password } = req.body;
+    if (!username || !password) {
+      return res.status(400).json({ error: "Username and password are required" });
+    }
+    const user = db.verifyUser(username, password);
+    if (!user) {
+      return res.status(401).json({ error: "Invalid username or password" });
+    }
+    sendAgentLog("System", `Merchant user '${username}' logged in successfully.`);
+    res.json({ success: true, user: { username: user.username, storeId: user.storeId, onboarded: user.onboarded } });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/stores/onboard', (req, res) => {
+  try {
+    const { storeId, storeName, city, credentials } = req.body;
+    if (!storeId || !storeName || !city) {
+      return res.status(400).json({ error: "Store ID, Store Name, and City are required" });
+    }
+    const store = db.onboardStore(storeId, storeName, city, credentials || {});
+    sendAgentLog("System", `[Store: ${storeId}] Onboarding complete! Paytm & Twilio integrations initialized.`);
+    res.json({ success: true, store });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -1,18 +1,18 @@
 const db = require('./database');
 
 class WhatsappService {
-  async sendMessage(to, body) {
-    const settings = db.getSettings();
+  async sendMessage(to, body, storeId) {
+    const settings = db.getSettings(storeId);
     const { twilioSid, twilioToken, twilioNumber, whatsappRecipient } = settings;
 
     // Check if real Twilio keys are configured
     if (!twilioSid || !twilioToken || !twilioNumber) {
-      console.log(`[Twilio Service] (MOCKED) Message to ${to}: "${body}"`);
+      console.log(`[Twilio Service] [Store: ${storeId || 'default'}] (MOCKED) Message to ${to}: "${body}"`);
       return { success: true, status: "mocked" };
     }
 
     const recipient = whatsappRecipient || to;
-    console.log(`[Twilio Service] Sending REAL WhatsApp message to ${recipient}...`);
+    console.log(`[Twilio Service] [Store: ${storeId}] Sending REAL WhatsApp message to ${recipient}...`);
 
     try {
       const authHeader = 'Basic ' + Buffer.from(`${twilioSid}:${twilioToken}`).toString('base64');

@@ -73,7 +73,7 @@ class VyasMarketing {
     db.addChatMessage(storeId, customer.phone, "Vyas (AI)", text);
 
     // TRIGGER REAL WHATSAPP CALL IF CONFIGURED
-    await whatsappService.sendMessage(customer.phone, text);
+    await whatsappService.sendMessage(customer.phone, text, storeId);
 
     if (logCallback) logCallback(`[Vyas] Sent WhatsApp marketing offer to ${customer.name} (${customer.phone}) for ${favoredProduct}.`);
   }
@@ -111,7 +111,7 @@ class VyasMarketing {
         if (product && product.current_stock <= 0) {
           const outOfStockMsg = `We apologize, but ${product.item_name} just ran out of stock. We will notify you when it arrives.`;
           db.addChatMessage(storeId, phone, "Vyas (AI)", outOfStockMsg);
-          await whatsappService.sendMessage(phone, outOfStockMsg);
+          await whatsappService.sendMessage(phone, outOfStockMsg, storeId);
           return;
         }
 
@@ -132,14 +132,14 @@ class VyasMarketing {
         db.addChatMessage(storeId, phone, "Vyas (AI)", confirmMsg);
         
         // TRIGGER REAL WHATSAPP RESPONSE IF CONFIGURED
-        await whatsappService.sendMessage(phone, confirmMsg);
+        await whatsappService.sendMessage(phone, confirmMsg, storeId);
 
         if (logCallback) logCallback(`[Vyas] Order confirmed for ${customerTx.customer_name}. Generated Paytm Payment link for ₹${amount}.`);
 
       } else {
         const fallbackMsg = "Namaste! This is the automated assistant for our store. To place an order, reply 'YES' to our latest offer, or type the items you need and we will create a bill for you!";
         db.addChatMessage(storeId, phone, "Vyas (AI)", fallbackMsg);
-        await whatsappService.sendMessage(phone, fallbackMsg);
+        await whatsappService.sendMessage(phone, fallbackMsg, storeId);
         if (logCallback) logCallback(`[Vyas] Handled chatbot query from ${phone}.`);
       }
     }, 1000);

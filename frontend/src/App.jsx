@@ -13,14 +13,35 @@ import KiranaUnion from './components/KiranaUnion';
 import AgentTicker from './components/AgentTicker';
 import SettingsPanel from './components/SettingsPanel';
 import UPIQRModal from './components/UPIQRModal';
+import LandingPage from './components/LandingPage';
+import AuthScreen from './components/AuthScreen';
+import OnboardingWizard from './components/OnboardingWizard';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [logs, setLogs] = useState([]);
   const [activeAgent, setActiveAgent] = useState('none');
   
+  // Session & Screen States
+  const [currentUser, setCurrentUser] = useState(() => {
+    const stored = localStorage.getItem('dhanda_user');
+    return stored ? JSON.parse(stored) : null;
+  });
+
+  const [screen, setScreen] = useState(() => {
+    const stored = localStorage.getItem('dhanda_user');
+    if (stored) {
+      const userObj = JSON.parse(stored);
+      return userObj.onboarded ? 'dashboard' : 'onboard';
+    }
+    return 'landing';
+  });
+  
   // Multi-tenant States
-  const [storeId, setStoreId] = useState('ramesh');
+  const [storeId, setStoreId] = useState(() => {
+    const stored = localStorage.getItem('dhanda_user');
+    return stored ? JSON.parse(stored).storeId : 'ramesh';
+  });
   const [stores, setStores] = useState({});
   const [settingsOpen, setSettingsOpen] = useState(false);
 
@@ -180,10 +201,54 @@ const App = () => {
     setStoreId(newStoreId);
     setLogs([]);
     addManualLog("System", `Logged in as ${stores[newStoreId]?.name || newStoreId}.`);
+    if (currentUser) {
+      const updatedUser = { ...currentUser, storeId: newStoreId };
+      setCurrentUser(updatedUser);
+      localStorage.setItem('dhanda_user', JSON.stringify(updatedUser));
+    }
   };
 
   // Determine if there is an active WebRTC voice call running
   const hasActiveCall = negotiations.some(n => n.status === 'NEGOTIATING' || n.status === 'WAITING_APPROVAL');
+
+  if (screen === 'landing') {
+    return <LandingPage onGetStarted={() => setScreen('auth')} />;
+  }
+
+  if (screen === 'auth') {
+    return (
+      <AuthScreen 
+        onAuthSuccess={(user) => {
+          setCurrentUser(user);
+          localStorage.setItem('dhanda_user', JSON.stringify(user));
+          setStoreId(user.storeId);
+          if (user.onboarded) {
+            setScreen('dashboard');
+          } else {
+            setScreen('onboard');
+          }
+          fetchStores();
+        }}
+        onBackToLanding={() => setScreen('landing')}
+      />
+    );
+  }
+
+  if (screen === 'onboard') {
+    return (
+      <OnboardingWizard
+        user={currentUser}
+        onOnboardingComplete={(store) => {
+          const updatedUser = { ...currentUser, onboarded: true };
+          setCurrentUser(updatedUser);
+          localStorage.setItem('dhanda_user', JSON.stringify(updatedUser));
+          setScreen('dashboard');
+          fetchStores();
+          fetchData();
+        }}
+      />
+    );
+  }
 
   return (
     <div className="relative min-h-screen text-gray-800 px-4 md:px-8 py-6 z-10 flex flex-col justify-between">
@@ -210,6 +275,20 @@ const App = () => {
 
         {/* Tenant Profile Selector & Config Panel */}
         <div className="flex items-center gap-3">
+          {currentUser && (
+            <button
+              onClick={() => {
+                localStorage.removeItem('dhanda_user');
+                setCurrentUser(null);
+                setScreen('landing');
+              }}
+              className="px-3 py-2 border border-black/10 bg-white hover:bg-black/5 hover:border-black/30 rounded-xl text-xs font-bold uppercase tracking-wider text-gray-600 hover:text-black transition-all"
+              title="Sign Out"
+            >
+              Sign Out
+            </button>
+          )}
+
           <button
             onClick={() => setSettingsOpen(true)}
             className="p-2 border border-black/5 bg-white hover:border-black/30 rounded-xl text-gray-600 hover:text-black transition-all"
@@ -263,12 +342,12 @@ const App = () => {
       </main>
 
       {/* Navigation tabs */}
-      <nav className="relative flex border-b border-black/5 mb-6 z-20 gap-2 overflow-x-auto">
+      <nav className="relative flex bg-black/5 p-1 rounded-2xl border border-black/5 mb-6 z-20 gap-1 overflow-x-auto w-max max-w-full">
         <button
           onClick={() => setActiveTab('dashboard')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
             activeTab === 'dashboard'
-              ? 'border-b-2 border-black text-black'
+              ? 'bg-white text-black shadow-sm'
               : 'text-gray-400 hover:text-black'
           }`}
         >
@@ -276,56 +355,70 @@ const App = () => {
         </button>
         <button
           onClick={() => setActiveTab('spatial')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'spatial' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'spatial' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           CCTV Spatial Twin
         </button>
         <button
           onClick={() => setActiveTab('cfo')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'cfo' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'cfo' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           Chanakya CFO
         </button>
         <button
           onClick={() => setActiveTab('procurement')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'procurement' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'procurement' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           Kuber Supply
         </button>
         <button
           onClick={() => setActiveTab('marketing')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'marketing' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'marketing' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           Vyas Marketing
         </button>
         <button
           onClick={() => setActiveTab('syndicate')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'syndicate' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'syndicate' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           Kirana Cartel
         </button>
         <button
           onClick={() => setActiveTab('union')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'union' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'union' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           P2P Credit Union
         </button>
         <button
           onClick={() => setActiveTab('underwrite')}
-          className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-            activeTab === 'underwrite' ? 'border-b-2 border-black text-black' : 'text-gray-400 hover:text-black'
+          className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+            activeTab === 'underwrite' 
+              ? 'bg-white text-black shadow-sm' 
+              : 'text-gray-400 hover:text-black'
           }`}
         >
           Invoice Underwriting
@@ -379,7 +472,7 @@ const App = () => {
       </footer>
 
       {/* Settings Modal */}
-      <SettingsPanel isOpen={settingsOpen} onClose={() => setSettingsOpen(false)} />
+      <SettingsPanel isOpen={settingsOpen} onClose={() => setSettingsOpen(false)} storeId={storeId} />
 
       {/* UPI QR Payment Modal */}
       <UPIQRModal 
@@ -388,6 +481,7 @@ const App = () => {
         amount={qrAmount}
         payeeName={qrPayee}
         orderDetails={qrDetails}
+        storeId={storeId}
       />
 
     </div>
