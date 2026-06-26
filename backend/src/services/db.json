@@ -53,6 +53,26 @@
           "items": "Ashirvaad Atta (2 units)",
           "payment_status": "SUCCESS",
           "status": "completed"
+        },
+        {
+          "id": 6,
+          "date": "2026-06-26T13:31:41.358Z",
+          "customer_name": "Ravi Teja",
+          "customer_phone": "+919843960112",
+          "amount": 280,
+          "items": "Surf Excel (2 units)",
+          "payment_status": "SUCCESS",
+          "status": "completed"
+        },
+        {
+          "id": 7,
+          "date": "2026-06-26T13:33:56.381Z",
+          "customer_name": "Ravi Teja",
+          "customer_phone": "+919912808684",
+          "amount": 45,
+          "items": "Ashirvaad Atta (1 units)",
+          "payment_status": "SUCCESS",
+          "status": "completed"
         }
       ],
       "inventory": [
@@ -68,7 +88,7 @@
         {
           "id": 2,
           "item_name": "Ashirvaad Atta",
-          "current_stock": 78,
+          "current_stock": 77,
           "safety_limit": 30,
           "unit_wholesale_cost": 32,
           "unit_retail_price": 45,
@@ -95,7 +115,7 @@
         {
           "id": 5,
           "item_name": "Surf Excel",
-          "current_stock": 25,
+          "current_stock": 23,
           "safety_limit": 15,
           "unit_wholesale_cost": 110,
           "unit_retail_price": 140,
@@ -405,6 +425,167 @@
           "sender": "Vyas (AI)",
           "message": "Hello Deepika Padukone! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
           "timestamp": "2026-06-26T13:28:55.544Z"
+        },
+        {
+          "id": 30,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:55.518Z"
+        },
+        {
+          "id": 31,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.091Z"
+        },
+        {
+          "id": 32,
+          "customer_phone": "+919665514236",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.096Z"
+        },
+        {
+          "id": 33,
+          "customer_phone": "+919943416166",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.103Z"
+        },
+        {
+          "id": 34,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.534Z"
+        },
+        {
+          "id": 35,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.538Z"
+        },
+        {
+          "id": 36,
+          "customer_phone": "+919665514236",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.638Z"
+        },
+        {
+          "id": 37,
+          "customer_phone": "+919943416166",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.645Z"
+        },
+        {
+          "id": 38,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.549Z"
+        },
+        {
+          "id": 39,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.557Z"
+        },
+        {
+          "id": 40,
+          "customer_phone": "+919665514236",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.565Z"
+        },
+        {
+          "id": 41,
+          "customer_phone": "+919943416166",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.582Z"
+        },
+        {
+          "id": 42,
+          "customer_phone": "+919843960112",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.594Z"
+        },
+        {
+          "id": 43,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.556Z"
+        },
+        {
+          "id": 44,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.564Z"
+        },
+        {
+          "id": 45,
+          "customer_phone": "+919665514236",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.593Z"
+        },
+        {
+          "id": 46,
+          "customer_phone": "+919943416166",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.599Z"
+        },
+        {
+          "id": 47,
+          "customer_phone": "+919843960112",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.608Z"
+        },
+        {
+          "id": 48,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.565Z"
+        },
+        {
+          "id": 49,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.570Z"
+        },
+        {
+          "id": 50,
+          "customer_phone": "+919665514236",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.586Z"
+        },
+        {
+          "id": 51,
+          "customer_phone": "+919943416166",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.601Z"
+        },
+        {
+          "id": 52,
+          "customer_phone": "+919843960112",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.615Z"
         }
       ],
       "lending": {
@@ -467,6 +648,26 @@
           "items": "Ashirvaad Atta (2 units)",
           "payment_status": "SUCCESS",
           "status": "completed"
+        },
+        {
+          "id": 6,
+          "date": "2026-06-26T13:30:11.352Z",
+          "customer_name": "Mahesh Babu",
+          "customer_phone": "+919622078747",
+          "amount": 280,
+          "items": "Surf Excel (2 units)",
+          "payment_status": "SUCCESS",
+          "status": "completed"
+        },
+        {
+          "id": 7,
+          "date": "2026-06-26T13:32:26.371Z",
+          "customer_name": "Deepika Padukone",
+          "customer_phone": "+919770176919",
+          "amount": 45,
+          "items": "Ashirvaad Atta (1 units)",
+          "payment_status": "SUCCESS",
+          "status": "completed"
         }
       ],
       "inventory": [
@@ -482,7 +683,7 @@
         {
           "id": 2,
           "item_name": "Ashirvaad Atta",
-          "current_stock": 78,
+          "current_stock": 77,
           "safety_limit": 30,
           "unit_wholesale_cost": 32,
           "unit_retail_price": 45,
@@ -509,7 +710,7 @@
         {
           "id": 5,
           "item_name": "Surf Excel",
-          "current_stock": 23,
+          "current_stock": 21,
           "safety_limit": 15,
           "unit_wholesale_cost": 110,
           "unit_retail_price": 140,
@@ -861,6 +1062,188 @@
           "sender": "Vyas (AI)",
           "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
           "timestamp": "2026-06-26T13:28:55.576Z"
+        },
+        {
+          "id": 36,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.108Z"
+        },
+        {
+          "id": 37,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.115Z"
+        },
+        {
+          "id": 38,
+          "customer_phone": "+919245651297",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.120Z"
+        },
+        {
+          "id": 39,
+          "customer_phone": "+919601126913",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.125Z"
+        },
+        {
+          "id": 40,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.654Z"
+        },
+        {
+          "id": 41,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.659Z"
+        },
+        {
+          "id": 42,
+          "customer_phone": "+919245651297",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.665Z"
+        },
+        {
+          "id": 43,
+          "customer_phone": "+919601126913",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.672Z"
+        },
+        {
+          "id": 44,
+          "customer_phone": "+919622078747",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.690Z"
+        },
+        {
+          "id": 45,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.602Z"
+        },
+        {
+          "id": 46,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.617Z"
+        },
+        {
+          "id": 47,
+          "customer_phone": "+919245651297",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.629Z"
+        },
+        {
+          "id": 48,
+          "customer_phone": "+919601126913",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.635Z"
+        },
+        {
+          "id": 49,
+          "customer_phone": "+919622078747",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.648Z"
+        },
+        {
+          "id": 50,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.617Z"
+        },
+        {
+          "id": 51,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.630Z"
+        },
+        {
+          "id": 52,
+          "customer_phone": "+919245651297",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.639Z"
+        },
+        {
+          "id": 53,
+          "customer_phone": "+919601126913",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.648Z"
+        },
+        {
+          "id": 54,
+          "customer_phone": "+919622078747",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.657Z"
+        },
+        {
+          "id": 55,
+          "customer_phone": "+919770176919",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.664Z"
+        },
+        {
+          "id": 56,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.629Z"
+        },
+        {
+          "id": 57,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.646Z"
+        },
+        {
+          "id": 58,
+          "customer_phone": "+919245651297",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.653Z"
+        },
+        {
+          "id": 59,
+          "customer_phone": "+919601126913",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.664Z"
+        },
+        {
+          "id": 60,
+          "customer_phone": "+919622078747",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.670Z"
+        },
+        {
+          "id": 61,
+          "customer_phone": "+919770176919",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.682Z"
         }
       ],
       "lending": {
@@ -1532,6 +1915,251 @@
           "sender": "Vyas (AI)",
           "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
           "timestamp": "2026-06-26T13:28:55.658Z"
+        },
+        {
+          "id": 59,
+          "customer_phone": "+919899887766",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amit Kumar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.131Z"
+        },
+        {
+          "id": 60,
+          "customer_phone": "+919811223344",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Neha Goel! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.137Z"
+        },
+        {
+          "id": 61,
+          "customer_phone": "+919904819217",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Fortune Mustard Oil (1L) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.142Z"
+        },
+        {
+          "id": 62,
+          "customer_phone": "+919254342201",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.148Z"
+        },
+        {
+          "id": 63,
+          "customer_phone": "+919174804626",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Fortune Mustard Oil (1L) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.154Z"
+        },
+        {
+          "id": 64,
+          "customer_phone": "+919721772114",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.163Z"
+        },
+        {
+          "id": 65,
+          "customer_phone": "+919894201326",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.170Z"
+        },
+        {
+          "id": 66,
+          "customer_phone": "+919899887766",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amit Kumar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.703Z"
+        },
+        {
+          "id": 67,
+          "customer_phone": "+919811223344",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Neha Goel! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.712Z"
+        },
+        {
+          "id": 68,
+          "customer_phone": "+919904819217",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Fortune Mustard Oil (1L) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.726Z"
+        },
+        {
+          "id": 69,
+          "customer_phone": "+919254342201",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.732Z"
+        },
+        {
+          "id": 70,
+          "customer_phone": "+919174804626",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Fortune Mustard Oil (1L) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.749Z"
+        },
+        {
+          "id": 71,
+          "customer_phone": "+919721772114",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.760Z"
+        },
+        {
+          "id": 72,
+          "customer_phone": "+919894201326",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.772Z"
+        },
+        {
+          "id": 73,
+          "customer_phone": "+919899887766",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amit Kumar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.662Z"
+        },
+        {
+          "id": 74,
+          "customer_phone": "+919811223344",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Neha Goel! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.670Z"
+        },
+        {
+          "id": 75,
+          "customer_phone": "+919904819217",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Fortune Mustard Oil (1L) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.680Z"
+        },
+        {
+          "id": 76,
+          "customer_phone": "+919254342201",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.686Z"
+        },
+        {
+          "id": 77,
+          "customer_phone": "+919174804626",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Fortune Mustard Oil (1L) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.694Z"
+        },
+        {
+          "id": 78,
+          "customer_phone": "+919721772114",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.700Z"
+        },
+        {
+          "id": 79,
+          "customer_phone": "+919894201326",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.714Z"
+        },
+        {
+          "id": 80,
+          "customer_phone": "+919899887766",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amit Kumar! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.673Z"
+        },
+        {
+          "id": 81,
+          "customer_phone": "+919811223344",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Neha Goel! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.679Z"
+        },
+        {
+          "id": 82,
+          "customer_phone": "+919904819217",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Fortune Mustard Oil (1L) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.684Z"
+        },
+        {
+          "id": 83,
+          "customer_phone": "+919254342201",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.696Z"
+        },
+        {
+          "id": 84,
+          "customer_phone": "+919174804626",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Fortune Mustard Oil (1L) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.700Z"
+        },
+        {
+          "id": 85,
+          "customer_phone": "+919721772114",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.711Z"
+        },
+        {
+          "id": 86,
+          "customer_phone": "+919894201326",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.717Z"
+        },
+        {
+          "id": 87,
+          "customer_phone": "+919899887766",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amit Kumar! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.697Z"
+        },
+        {
+          "id": 88,
+          "customer_phone": "+919811223344",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Neha Goel! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.730Z"
+        },
+        {
+          "id": 89,
+          "customer_phone": "+919904819217",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Fortune Mustard Oil (1L) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.761Z"
+        },
+        {
+          "id": 90,
+          "customer_phone": "+919254342201",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.868Z"
+        },
+        {
+          "id": 91,
+          "customer_phone": "+919174804626",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Fortune Mustard Oil (1L) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.882Z"
+        },
+        {
+          "id": 92,
+          "customer_phone": "+919721772114",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.894Z"
+        },
+        {
+          "id": 93,
+          "customer_phone": "+919894201326",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.901Z"
         }
       ],
       "lending": {
@@ -1594,6 +2222,16 @@
           "items": "Surf Excel (1 units)",
           "payment_status": "SUCCESS",
           "status": "completed"
+        },
+        {
+          "id": 6,
+          "date": "2026-06-26T13:33:11.375Z",
+          "customer_name": "Ravi Teja",
+          "customer_phone": "+919889644186",
+          "amount": 165,
+          "items": "Fortune Mustard Oil (1 units)",
+          "payment_status": "SUCCESS",
+          "status": "completed"
         }
       ],
       "inventory": [
@@ -1618,7 +2256,7 @@
         {
           "id": 3,
           "item_name": "Fortune Mustard Oil",
-          "current_stock": 8,
+          "current_stock": 7,
           "safety_limit": 20,
           "unit_wholesale_cost": 130,
           "unit_retail_price": 165,
@@ -1948,6 +2586,188 @@
           "sender": "Vyas (AI)",
           "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
           "timestamp": "2026-06-26T13:28:55.776Z"
+        },
+        {
+          "id": 37,
+          "customer_phone": "+919988776655",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Singh! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.175Z"
+        },
+        {
+          "id": 38,
+          "customer_phone": "+919626291453",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Johar! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.181Z"
+        },
+        {
+          "id": 39,
+          "customer_phone": "+919618286885",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Johar! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.556Z"
+        },
+        {
+          "id": 40,
+          "customer_phone": "+919844405402",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.562Z"
+        },
+        {
+          "id": 41,
+          "customer_phone": "+919196761200",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.568Z"
+        },
+        {
+          "id": 42,
+          "customer_phone": "+919988776655",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Singh! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.780Z"
+        },
+        {
+          "id": 43,
+          "customer_phone": "+919626291453",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Johar! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.786Z"
+        },
+        {
+          "id": 44,
+          "customer_phone": "+919618286885",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Johar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.791Z"
+        },
+        {
+          "id": 45,
+          "customer_phone": "+919844405402",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.806Z"
+        },
+        {
+          "id": 46,
+          "customer_phone": "+919196761200",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.815Z"
+        },
+        {
+          "id": 47,
+          "customer_phone": "+919988776655",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Singh! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.725Z"
+        },
+        {
+          "id": 48,
+          "customer_phone": "+919626291453",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Johar! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.749Z"
+        },
+        {
+          "id": 49,
+          "customer_phone": "+919618286885",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Johar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.756Z"
+        },
+        {
+          "id": 50,
+          "customer_phone": "+919844405402",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.761Z"
+        },
+        {
+          "id": 51,
+          "customer_phone": "+919196761200",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.765Z"
+        },
+        {
+          "id": 52,
+          "customer_phone": "+919988776655",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Singh! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.726Z"
+        },
+        {
+          "id": 53,
+          "customer_phone": "+919626291453",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Johar! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.730Z"
+        },
+        {
+          "id": 54,
+          "customer_phone": "+919618286885",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Johar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.748Z"
+        },
+        {
+          "id": 55,
+          "customer_phone": "+919844405402",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.756Z"
+        },
+        {
+          "id": 56,
+          "customer_phone": "+919196761200",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.763Z"
+        },
+        {
+          "id": 57,
+          "customer_phone": "+919988776655",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Karan Singh! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.914Z"
+        },
+        {
+          "id": 58,
+          "customer_phone": "+919626291453",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Johar! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.924Z"
+        },
+        {
+          "id": 59,
+          "customer_phone": "+919618286885",
+          "sender": "Vyas (AI)",
+          "message": "Hello Karan Johar! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.931Z"
+        },
+        {
+          "id": 60,
+          "customer_phone": "+919844405402",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.942Z"
+        },
+        {
+          "id": 61,
+          "customer_phone": "+919196761200",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Ravi Teja! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.951Z"
+        },
+        {
+          "id": 62,
+          "customer_phone": "+919889644186",
+          "sender": "Vyas (AI)",
+          "message": "Hello Ravi Teja! Get your monthly stock of Fortune Mustard Oil (1L) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.962Z"
         }
       ],
       "lending": {
@@ -2040,6 +2860,16 @@
           "items": "Basmati Rice (2 units)",
           "payment_status": "SUCCESS",
           "status": "completed"
+        },
+        {
+          "id": 9,
+          "date": "2026-06-26T13:30:56.360Z",
+          "customer_name": "Amitabh Bachchan",
+          "customer_phone": "+919950953327",
+          "amount": 140,
+          "items": "Surf Excel (1 units)",
+          "payment_status": "SUCCESS",
+          "status": "completed"
         }
       ],
       "inventory": [
@@ -2082,7 +2912,7 @@
         {
           "id": 5,
           "item_name": "Surf Excel",
-          "current_stock": 23,
+          "current_stock": 22,
           "safety_limit": 15,
           "unit_wholesale_cost": 110,
           "unit_retail_price": 140,
@@ -2714,6 +3544,272 @@
           "sender": "Vyas (AI)",
           "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
           "timestamp": "2026-06-26T13:28:55.883Z"
+        },
+        {
+          "id": 76,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.575Z"
+        },
+        {
+          "id": 77,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.582Z"
+        },
+        {
+          "id": 78,
+          "customer_phone": "+919838027689",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.588Z"
+        },
+        {
+          "id": 79,
+          "customer_phone": "+919929040178",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.595Z"
+        },
+        {
+          "id": 80,
+          "customer_phone": "+919195909709",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.601Z"
+        },
+        {
+          "id": 81,
+          "customer_phone": "+919490647140",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:29:56.607Z"
+        },
+        {
+          "id": 82,
+          "customer_phone": "+919697258941",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:29:56.613Z"
+        },
+        {
+          "id": 83,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.822Z"
+        },
+        {
+          "id": 84,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.830Z"
+        },
+        {
+          "id": 85,
+          "customer_phone": "+919838027689",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.841Z"
+        },
+        {
+          "id": 86,
+          "customer_phone": "+919929040178",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.853Z"
+        },
+        {
+          "id": 87,
+          "customer_phone": "+919195909709",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.860Z"
+        },
+        {
+          "id": 88,
+          "customer_phone": "+919490647140",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:30:55.869Z"
+        },
+        {
+          "id": 89,
+          "customer_phone": "+919697258941",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:30:55.880Z"
+        },
+        {
+          "id": 90,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.773Z"
+        },
+        {
+          "id": 91,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Rahul Verma! We noticed you haven't ordered your usual Ashirvaad Atta (10kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹390 (MRP ₹430). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.778Z"
+        },
+        {
+          "id": 92,
+          "customer_phone": "+919838027689",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.785Z"
+        },
+        {
+          "id": 93,
+          "customer_phone": "+919929040178",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.793Z"
+        },
+        {
+          "id": 94,
+          "customer_phone": "+919195909709",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.798Z"
+        },
+        {
+          "id": 95,
+          "customer_phone": "+919490647140",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.808Z"
+        },
+        {
+          "id": 96,
+          "customer_phone": "+919697258941",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:31:55.815Z"
+        },
+        {
+          "id": 97,
+          "customer_phone": "+919950953327",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:31:55.823Z"
+        },
+        {
+          "id": 98,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Hello Priyanka Patel! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.768Z"
+        },
+        {
+          "id": 99,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.778Z"
+        },
+        {
+          "id": 100,
+          "customer_phone": "+919838027689",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.782Z"
+        },
+        {
+          "id": 101,
+          "customer_phone": "+919929040178",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.792Z"
+        },
+        {
+          "id": 102,
+          "customer_phone": "+919195909709",
+          "sender": "Vyas (AI)",
+          "message": "Hello Deepika Padukone! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.797Z"
+        },
+        {
+          "id": 103,
+          "customer_phone": "+919490647140",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:32:55.806Z"
+        },
+        {
+          "id": 104,
+          "customer_phone": "+919697258941",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of Basmati Rice (5kg) at a member-exclusive rate of ₹410 instead of ₹450. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.810Z"
+        },
+        {
+          "id": 105,
+          "customer_phone": "+919950953327",
+          "sender": "Vyas (AI)",
+          "message": "Hello Amitabh Bachchan! Get your monthly stock of Surf Excel (1kg) at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:32:55.817Z"
+        },
+        {
+          "id": 106,
+          "customer_phone": "+919812345678",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Priyanka Patel! We noticed you haven't ordered your usual groceries recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.969Z"
+        },
+        {
+          "id": 107,
+          "customer_phone": "+919922334455",
+          "sender": "Vyas (AI)",
+          "message": "Hello Rahul Verma! Get your monthly stock of Ashirvaad Atta (10kg) at a member-exclusive rate of ₹390 instead of ₹430. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:55.983Z"
+        },
+        {
+          "id": 108,
+          "customer_phone": "+919838027689",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:55.994Z"
+        },
+        {
+          "id": 109,
+          "customer_phone": "+919929040178",
+          "sender": "Vyas (AI)",
+          "message": "Hello Mahesh Babu! Get your monthly stock of groceries at a member-exclusive rate of ₹120 instead of ₹140. Reply 'YES' to order now and pay cash on delivery or Paytm.",
+          "timestamp": "2026-06-26T13:33:56.019Z"
+        },
+        {
+          "id": 110,
+          "customer_phone": "+919195909709",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Deepika Padukone! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:56.029Z"
+        },
+        {
+          "id": 111,
+          "customer_phone": "+919490647140",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:56.035Z"
+        },
+        {
+          "id": 112,
+          "customer_phone": "+919697258941",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Mahesh Babu! We noticed you haven't ordered your usual Basmati Rice (5kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹410 (MRP ₹450). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:56.045Z"
+        },
+        {
+          "id": 113,
+          "customer_phone": "+919950953327",
+          "sender": "Vyas (AI)",
+          "message": "Namaste Amitabh Bachchan! We noticed you haven't ordered your usual Surf Excel (1kg) recently. Since you are a loyal customer of our store, we have a special discount: Buy now for just ₹120 (MRP ₹140). Reply 'YES' to confirm your order!",
+          "timestamp": "2026-06-26T13:33:56.051Z"
         }
       ],
       "lending": {
